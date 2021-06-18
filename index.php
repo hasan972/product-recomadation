@@ -2,7 +2,6 @@
 include("header.php");
 include("db.php");
 ?>
-
 <div class="container">
 <div class="panel panel-default">
 <div class="panel-heading">
@@ -14,6 +13,14 @@ include("db.php");
 
 <div class="panel-body">
     <table class="table table-striped">
+    <th>User Name</th>
+
+    <?php $result=mysqli_query($con,"select * from users");
+    while($row=mysqli_fetch_array($result))
+    { 
+    ?>
+    <tr><td><?php echo $row['username'];?></td></tr>
+    <?php } ?>
     <th>User Name</th>
 
     <?php $result=mysqli_query($con,"select * from users");
