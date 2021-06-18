@@ -14,21 +14,21 @@ include("db.php");
 <div class="panel-body">
     <table class="table table-striped">
     <th>User Name</th>
+    <th>Add Products</th>
 
     <?php $result=mysqli_query($con,"select * from users");
     while($row=mysqli_fetch_array($result))
     { 
     ?>
-    <tr><td><?php echo $row['username'];?></td></tr>
+    <tr><td><?php echo $row['username'];?></td>
+    <td>
+    <form action="add_products.php">
+     <input type="submit" name="add_products" class="btn btn-primary" value="Add Products">
+     <input type="hidden" name="id" value="<?php $row['id'] ?>">
+    </form>
+    </td></tr>
     <?php } ?>
-    <th>User Name</th>
-
-    <?php $result=mysqli_query($con,"select * from users");
-    while($row=mysqli_fetch_array($result))
-    { 
-    ?>
-    <tr><td><?php echo $row['username'];?></td></tr>
-    <?php } ?>
+    
     </table>
 </div>
 </div>
