@@ -22,12 +22,12 @@ if (isset($_POST['submit']))
 <div class="panel panel-default">
     <div class="panel-heading">
         <h2>
-        <a class="btn btn-success" href="add.php">Add Products</a>
+        <a class="btn btn-success" href="add_product.php">Add Products</a>
         <a class="btn btn-info pull-right" href="index.php"> Back</a>
         </h2>
     </div>
 <?php if($flag){ ?>
-<dic class="btn alert-success">User successfully inserted in the database</div>
+<div class="btn alert-success">User successfully inserted in the database</div>
 
 <?php } ?>
     

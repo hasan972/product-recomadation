@@ -22,9 +22,9 @@ include("db.php");
     ?>
     <tr><td><?php echo $row['username'];?></td>
     <td>
-    <form action="add_products.php">
-     <input type="submit" name="add_products" class="btn btn-primary" value="Add Products">
-     <input type="hidden" name="id" value="<?php $row['id'] ?>">
+    <form action="add_product.php">
+     <input type="submit" name="add_product" class="btn btn-primary" value="Add Product">
+     <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
     </form>
     </td></tr>
     <?php } ?>
