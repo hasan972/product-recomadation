@@ -15,6 +15,7 @@ include("db.php");
     <table class="table table-striped">
     <th>User Name</th>
     <th>Add Products</th>
+     <th>Show Products</th>
 
     <?php $result=mysqli_query($con,"select * from users");
     while($row=mysqli_fetch_array($result))
@@ -26,7 +27,15 @@ include("db.php");
      <input type="submit" name="add_product" class="btn btn-primary" value="Add Product">
      <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
     </form>
-    </td></tr>
+    </td>
+
+    <td>
+    <form action="show_product.php">
+     <input type="submit" name="show_product" class="btn btn-primary" value="Show Product">
+     <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+    </form>
+    </td>
+    </tr>
     <?php } ?>
     
     </table>
