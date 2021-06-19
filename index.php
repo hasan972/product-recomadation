@@ -16,6 +16,7 @@ include("db.php");
     <th>User Name</th>
     <th>Add Products</th>
      <th>Show Products</th>
+     <th>Show Recommendation</th>
 
     <?php $result=mysqli_query($con,"select * from users");
     while($row=mysqli_fetch_array($result))
@@ -35,12 +36,19 @@ include("db.php");
      <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
     </form>
     </td>
+
+    <td>
+    <form action="user_recommendation.php">
+     <input type="submit" name="show_product" class="btn btn-primary" value="Show Recommendation">
+     <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+    </form>
+    </td>
     </tr>
     <?php } ?>
     
     </table>
 </div>
 </div>
-
+<h2><div class="well text-center">Developed @ By Rakibul Hasan</div></h2>
 
 </div>
